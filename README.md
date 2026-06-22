@@ -25,7 +25,7 @@
 
 - 🎓 &nbsp;Final-year Computer Science (CO-OP) @ **University of Ottawa** · graduating **Apr. 2027**
 - 📊 &nbsp;Data Analyst Intern @ **Canada Revenue Agency** · **Summer 2026**
-- 🔧 &nbsp;Currently building **[project-name](https://github.com/your-username/your-repo)** <!-- TODO: fill in -->
+- 🔧 &nbsp;Currently building **[Beta](https://github.com/Ayprusss/beta)** and helping with **[Club-hub](https://github.com/Cardbox-Solutions/club-hub-web-app)** <!-- TODO: fill in -->
 
 ---
 
