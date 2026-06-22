@@ -8,10 +8,10 @@
      platform allows it. GitHub's sanitizer may strip it on the profile
      page (links would open same-tab); it is harmless either way. -->
 <p align="center">
-  <a href="https://YOUR-PORTFOLIO.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://ayprusss.dev" target="_blank" rel="noopener noreferrer">
     <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0D1117?style=flat-square&logo=googlechrome&logoColor=7dd3fc" />
   </a>&nbsp;
-  <a href="https://linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkedin.com/in/anthonykhle" target="_blank" rel="noopener noreferrer">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=0a66c2" />
   </a>&nbsp;
   <a href="mailto:anthonykhle@gmail.com" target="_blank" rel="noopener noreferrer">
