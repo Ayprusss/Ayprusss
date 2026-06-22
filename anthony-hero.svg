@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 168" width="720" height="168" role="img" aria-label="Anthony Le">
+  <title>Anthony Le</title>
+  <defs>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#4d4d4d"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141414"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <style>/* <![CDATA[ */
+.frame { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+.f1 { animation-name: kf1; }
+.f2 { animation-name: kf2; }
+.sa { animation-name: ksa; } .sb { animation-name: ksb; }
+.sc { animation-name: ksc; } .sd { animation-name: ksd; }
+.scr { opacity: 0.82; }
+.dots { opacity: 0.9; }
+.ttl { font-family: 'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace; font-size: 11px; fill: #888888; letter-spacing: .5px; }
+/* font1 wraps the loop boundary so there is no blank gap */
+@keyframes kf1 { 0%{opacity:1} 30%{opacity:1} 30.5%{opacity:0} 83.5%{opacity:0} 84%{opacity:1} 100%{opacity:1} }
+@keyframes kf2{0%{opacity:0}39.50%{opacity:0}40.00%{opacity:1}72.00%{opacity:1}72.50%{opacity:0}100%{opacity:0}}
+@keyframes ksa{0%{opacity:0}29.50%{opacity:0}30.00%{opacity:1}35.00%{opacity:1}35.50%{opacity:0}100%{opacity:0}}
+@keyframes ksb{0%{opacity:0}34.50%{opacity:0}35.00%{opacity:1}40.00%{opacity:1}40.50%{opacity:0}100%{opacity:0}}
+@keyframes ksc{0%{opacity:0}71.50%{opacity:0}72.00%{opacity:1}78.00%{opacity:1}78.50%{opacity:0}100%{opacity:0}}
+@keyframes ksd{0%{opacity:0}77.50%{opacity:0}78.00%{opacity:1}84.00%{opacity:1}84.50%{opacity:0}100%{opacity:0}}
+/* ]]> */</style>
+  <rect x="0.5" y="0.5" width="719" height="167" rx="11" fill="url(#bg)" stroke="#2a2a2a" stroke-width="1"/>
+  <g class="dots">
+    <circle cx="22" cy="20" r="5" fill="#4d4d4d"/>
+    <circle cx="40" cy="20" r="5" fill="#808080"/>
+    <circle cx="58" cy="20" r="5" fill="#b3b3b3"/>
+  </g>
+  <text class="ttl" x="360.0" y="24" text-anchor="middle">anthony@uOttawa: ~</text>
+  <text class="frame f1" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="url(#nameGrad)"><tspan x="360.0" y="54.0">    ___          __  __                         __       </tspan><tspan x="360.0" y="67.0">   /   |  ____  / /_/ /_  ____  ____  __  __   / /   ___ </tspan><tspan x="360.0" y="80.0">  / /| | / __ \/ __/ __ \/ __ \/ __ \/ / / /  / /   / _ \</tspan><tspan x="360.0" y="93.0"> / ___ |/ / / / /_/ / / / /_/ / / / / /_/ /  / /___/  __/</tspan><tspan x="360.0" y="106.0">/_/  |_/_/ /_/\__/_/ /_/\____/_/ /_/\__, /  /_____/\___/ </tspan><tspan x="360.0" y="119.0">                                   /____/                </tspan></text>
+  <text class="frame f2" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="url(#nameGrad)"><tspan x="360.0" y="54.0">    ___                                        </tspan><tspan x="360.0" y="67.0">   /   | __  ______  _______  _________________</tspan><tspan x="360.0" y="80.0">  / /| |/ / / / __ \/ ___/ / / / ___/ ___/ ___/</tspan><tspan x="360.0" y="93.0"> / ___ / /_/ / /_/ / /  / /_/ (__  |__  |__  ) </tspan><tspan x="360.0" y="106.0">/_/  |_\__, / .___/_/   \__,_/____/____/____/  </tspan><tspan x="360.0" y="119.0">      /____/_/                                 </tspan></text>
+  <g class="scr" fill="#cccccc"><text class="frame sa" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="#cccccc"><tspan x="360.0" y="68.5">]\░▒:||░▒=  ▒=]]    ▒ ░   ░#1=  ▒.  |0#.|   %  | |*   @ 1▓\*=.1+   0  ={=</tspan><tspan x="360.0" y="81.5">▒*0  ]    ░@. | [\▒[  } +  [  .]# { :░  █  % =  =   =  :/  }  % =.}▓ ██[ </tspan><tspan x="360.0" y="94.5">  {█@| ]▒  ▓  ░ █]} +:▒░]%      ] 1   ][ : [ }[    ▓  +░  :  ░ 1[#=}   █ </tspan><tspan x="360.0" y="107.5">] [.=0 0#%░/:  = +{]    ░   \ |/  =[# + =  {*  1 %  /  .1█.   } █%  █ {@ </tspan><tspan x="360.0" y="120.5"> = {1%   *{@+ : |▒/█▒  ▓# *  :   :   ▒    \% 1    /|    .| }█ @*   ]█ ▒.+</tspan></text></g>
+  <g class="scr" fill="#999999"><text class="frame sb" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="#999999"><tspan x="360.0" y="68.5"> } :1[  | 1: +}|:%█   .{. ]@## }  %@  0  \ ]+#% /      0] \  0*██. { : =#</tspan><tspan x="360.0" y="81.5"> ] {|%▒/ 0 +\▒ :   =█*  \. |:  []      ░ ]\ ]  [*  = ░1#  = 0 /█+0 \  @* </tspan><tspan x="360.0" y="94.5"> }}=*▓{ \ @/ \ 1     {  * % [+0 }* \ ░ % ██ \\| +▓# ▓   =1 +  .*   #▓}{| </tspan><tspan x="360.0" y="107.5">░0  |01]▓ ░  *▒+ ==▒|= [  . 1 *\▒|{+  █  %\+█   %*\  [  ░{+* \▒ /  }@/{|%</tspan><tspan x="360.0" y="120.5">{\   ▓  %:|.   \ \  ▓      .}:%=  ░   @   0=%1/ =▓ { |01  ]#  :   |   .{ </tspan></text></g>
+  <g class="scr" fill="#777777"><text class="frame sc" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="#777777"><tspan x="360.0" y="68.5"> % # 1: ▒:%{█   +:% :  ░ %% |{  :█      * :\= \%:=* ▓ / ]|   + ░     { ░{</tspan><tspan x="360.0" y="81.5">\ ▓  }   ▓*█. 0 █= █#   \░    }:+  { @=█    :  = }▒{/▓ ] ]    ▒ ░ @}\██ ]</tspan><tspan x="360.0" y="94.5">█#++ %   * 0: \ | 0}\.{     } {█ ░  @   █}0  █1▓   #  ░ 1 =1   ▓]   =}[[]</tspan><tspan x="360.0" y="107.5">   }[@/0   ]@= ▒        { #[ @  0/ { /. + } ▒}     1{[   @/0   *   @{|  ░</tspan><tspan x="360.0" y="120.5">  █  *   =@   +█.▓  * ▒  % /| [  1]@ ▓ ░  }  [ = ░1  {  #▒* 0  % ▓# .]0 %</tspan></text></g>
+  <g class="scr" fill="#bbbbbb"><text class="frame sd" text-anchor="middle" dominant-baseline="hanging" xml:space="preserve" font-family="'JetBrains Mono','Cascadia Code','Fira Code','Courier New',monospace" font-size="13" font-weight="700" fill="#bbbbbb"><tspan x="360.0" y="68.5">:  #░*.:  }  # █\░  *\.          █{{ [  ]  *\0   :[ @/    0 .] / |[/▒{ ] </tspan><tspan x="360.0" y="81.5">█ + \/   * . ▒ {[█01   \      ] 0 @    /+▒   ]   ░  | @=\ }  @| |▒ :: }*▒</tspan><tspan x="360.0" y="94.5">: .[1 ▓+ \▒▒+1   \{/░1|    #    1 = \  ░  :   ]/  ▒█#@.1]  } =▓  1  / #=█</tspan><tspan x="360.0" y="107.5">#\1 ]0/*{[.:}  } +  *{*█:]:%0▒{ {|    ]    |     *  /.+▒ {   1 %   @  [ :</tspan><tspan x="360.0" y="120.5">░= {*/}▓ = [ [▒ [] =▒@/ 0  \ =     @ :%0 [ 0/0       █     [:= *{▓   ▒ [ </tspan></text></g>
+</svg>
