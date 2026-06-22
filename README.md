@@ -9,13 +9,13 @@
      page (links would open same-tab); it is harmless either way. -->
 <p align="center">
   <a href="https://ayprusss.dev" target="_blank" rel="noopener noreferrer">
-    <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0D1117?style=flat-square&logo=googlechrome&logoColor=7dd3fc" />
+    <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0D1117?style=flat-square&logo=googlechrome&logoColor=ffffff" />
   </a>&nbsp;
-  <a href="https://linkedin.com/in/anthonykhle" target="_blank" rel="noopener noreferrer">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=0a66c2" />
+  <a href="https://linkedin.com/in/anthonykhle/" target="_blank" rel="noopener noreferrer">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=ffffff" />
   </a>&nbsp;
   <a href="mailto:anthonykhle@gmail.com" target="_blank" rel="noopener noreferrer">
-    <img alt="Email" src="https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=ea4335" />
+    <img alt="Email" src="https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=ffffff" />
   </a>
 </p>
 
