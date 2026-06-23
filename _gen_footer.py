@@ -10,11 +10,11 @@ import bisect
 import random
 
 W, H = 900, 240
-FS = 20
+FS = 18
 LINE_H = 16
 Y0 = 60
 GROUND_Y = 206
-CX = W / 2
+CELL = 12          # fixed character cell width (px) -- the grid the renderer must follow
 
 # --- hand-tuned skyline (x, top_row); smaller row = taller -----------------
 pts = [(0, 8), (5, 6), (9, 7), (14, 3), (18, 4), (22, 1), (24, 0), (27, 2),
@@ -34,21 +34,26 @@ S = [surf(x) for x in range(N)]
 
 # depth-weighted palettes: dense glyphs (more ink -> brighter on dark bg) for the
 # lit upper faces, sparse glyphs (darker) for the shadowed base.
-UPPER = list("@#%&$@#%&")         # just under the snow: brightest, densest
-MID = list("*!()/\\|=+&%?")       # rocky mid-face: busy texture
-LOWER = list(".:;'^,|!")          # base in shadow: sparse, dim
-random.seed(13)
+# Density ramp, brightest -> darkest by surface area. One char per depth band
+# (no randomness) so each face reads as a clean shaded contour, not a jumble.
+# dense / high-area = lit upper mass; sparse / low-area = shadowed base.
+RAMP = ["@", "#", "&", "$", "*", '"', ";", "'", ","]
 
 def body_char(x, r):
     maxd = (R - 1) - S[x]
     f = (r - S[x]) / maxd if maxd > 0 else 1.0     # 0 just below ridge -> 1 at base
-    pal = UPPER if f < 0.34 else MID if f < 0.7 else LOWER
-    return random.choice(pal)
+    idx = int((f ** 1.4) * len(RAMP))              # bias: keep most of the mass dense
+    return RAMP[min(idx, len(RAMP) - 1)]
 
 def cap_char(x):
     s = S[x]
     sr = S[x + 1] if x + 1 < N else s
-    return "/" if sr < s else "\\" if sr > s else "-"
+    sl = S[x - 1] if x > 0 else s
+    if sr < s:
+        return "/"
+    if sr > s:
+        return "\\"
+    return "/" if sl >= s else "\\"                # flat: keep the slope's sense
 
 body = ["".join(body_char(x, r) if r > S[x] else " " for x in range(N))
         for r in range(R)]
@@ -78,7 +83,7 @@ stars = [(round(random.uniform(20, W - 20), 1), round(random.uniform(12, 50), 1)
          for _ in range(12)]
 
 # --- emit ------------------------------------------------------------------
-BODY_COLOR = "#aeb9c5"
+BODY_COLOR = "#d0d7de"
 out = ['<?xml version="1.0" encoding="UTF-8"?>',
        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
        f'viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid meet" '
@@ -92,14 +97,25 @@ for x, y, dur, begin in stars:
                f'dur="{dur}s" begin="{begin}s" repeatCount="indefinite"/></text>')
 out.append('  </g>')
 
-out.append(f'  <g font-family="monospace" font-size="{FS}" xml:space="preserve" '
-           f'text-anchor="middle">')
-for r in range(R):
-    out.append(f'    <text x="{CX}" y="{Y0 + r * LINE_H}" fill="{BODY_COLOR}">'
-               f'{esc(body[r])}</text>')
-for r in range(R):
-    out.append(f'    <text x="{CX}" y="{Y0 + r * LINE_H}" fill="#ffffff">'
-               f'{esc(cap[r])}</text>')
+# Emit ONE <text> per non-space cell, each pinned to a single x (its grid column)
+# on a fixed CELL grid, with text-anchor="middle". A single, single-character,
+# absolutely-positioned <text> is the most universally supported SVG text
+# construct: spacing never depends on the renderer honoring multi-value x-lists
+# or per-glyph text chunks (the thing Chromium resolved differently, cramming the
+# glyphs together). Same column formula for body + cap layers so they line up.
+grid_x = (W - N * CELL) / 2
+out.append("  <g font-family=\"ui-monospace, 'Courier New', monospace\" "
+           f'font-size="{FS}" text-anchor="middle">')
+# Body first, then caps painted on top (they occupy complementary cells, so they
+# never double up).
+for layer, color in ((body, BODY_COLOR), (cap, "#ffffff")):
+    for r in range(R):
+        y = Y0 + r * LINE_H
+        for i in range(N):
+            ch = layer[r][i]
+            if ch != " ":
+                out.append(f'    <text x="{grid_x + i * CELL:.1f}" y="{y}" '
+                           f'fill="{color}">{esc(ch)}</text>')
 out.append('  </g>')
 
 out.append(f'  <line x1="0" y1="{GROUND_Y}" x2="{W}" y2="{GROUND_Y}" '
