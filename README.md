@@ -22,9 +22,37 @@
 
 ### Snapshot
 
-- 🎓 &nbsp;Final-year Computer Science (CO-OP) @ **University of Ottawa** · graduating **Apr. 2027**
-- 📊 &nbsp;Data Analyst Intern @ **Canada Revenue Agency** · **Summer 2026**
-- 🔧 &nbsp;Currently building **[Beta](https://github.com/Ayprusss/beta)** and helping with **[Club-hub](https://github.com/Cardbox-Solutions/club-hub-web-app)** <!-- TODO: fill in -->
+- Final-year Computer Science (CO-OP) @ **University of Ottawa** · graduating **Apr. 2027**
+- Data Analyst Intern @ **Canada Revenue Agency** · **Summer 2026**
+- Currently building **[Beta](https://github.com/Ayprusss/beta)** and helping with **[Club-hub](https://github.com/Cardbox-Solutions/club-hub-web-app)** <!-- TODO: fill in -->
+
+---
+
+### GitHub
+
+<!-- Grayscale to match the monochrome theme. Custom colors keep the stats
+     cards black-and-white; language bars / trophy ranks retain some color
+     the upstream APIs don't let us strip. -->
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Ayprusss&show_icons=true&hide_border=true&include_all_commits=true&title_color=ffffff&icon_color=ffffff&text_color=c9d1d9&bg_color=0d1117&ring_color=ffffff"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ayprusss&layout=compact&hide_border=true&langs_count=8&title_color=ffffff&text_color=c9d1d9&bg_color=0d1117"/>
+
+  <!-- 
+<img width="98%" src="https://github-profile-trophy.vercel.app/?username=Ayprusss&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=8"/>
+  -->
+
+</div>
+
+---
+
+### Featured Projects
+
+- **[Dejavu](https://github.com/Ayprusss/dejavu)** — Full-stack mock storefront for a luxury fashion brand, with a React 19 + Vite front end, an Express/Supabase API, and Stripe-powered checkout.
+- **[9 Vicious Detector](https://github.com/Ayprusss/9-vicious-detector)** — Python computer-vision app that detects a specific hand gesture from the webcam and triggers music playback in response.
+- **[Crux](https://github.com/Ayprusss/crux)** — Community-driven climbing map (Next.js, MapLibre, Supabase/PostGIS) that unifies outdoor crags, boulders, and gyms with crowd-sourced moderation.
+- **[Beta (IN PROGRESS)](https://github.com/Ayprusss/beta)** — ML-powered indoor bouldering coach that turns a climbing video into pose-based feedback on body positioning and technique.
+- **[Gladius](https://github.com/Ayprusss/Gladius)** — Multi-agent Claude CLI pipeline (Planner, Implementer, Reviewer) that plans, builds, and reviews a Jira ticket end to end.
 
 ---
 
@@ -72,24 +100,6 @@
   <img alt="Jira" src="https://img.shields.io/badge/Jira-0D1117?style=flat-square&logo=jira&logoColor=white" />
   <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-0D1117?style=flat-square&logo=anthropic&logoColor=white" />
 </p>
-
----
-
-### 📊 GitHub
-
-<!-- Grayscale to match the monochrome theme. Custom colors keep the stats
-     cards black-and-white; language bars / trophy ranks retain some color
-     the upstream APIs don't let us strip. -->
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Ayprusss&show_icons=true&hide_border=true&include_all_commits=true&title_color=ffffff&icon_color=ffffff&text_color=c9d1d9&bg_color=0d1117&ring_color=ffffff"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ayprusss&layout=compact&hide_border=true&langs_count=8&title_color=ffffff&text_color=c9d1d9&bg_color=0d1117"/>
-
-  <!-- 
-<img width="98%" src="https://github-profile-trophy.vercel.app/?username=Ayprusss&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=8"/>
-  -->
-
-</div>
 
 ---
 
