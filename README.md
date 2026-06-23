@@ -107,7 +107,3 @@
 <p align="center">
   <img src="./climber.jpg" width="420" alt="climber photo" />
 </p>
-
-<!-- Simple wave/footer via capsule-render (github.com/kyechan99/capsule-render),
-     grayscale to match the hero. -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=4d4d4d&height=120&section=footer&reversal=true" width="100%" alt="" />
