@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Animated ASCII snowy-mountain footer SVG (grayscale, SMIL animation).
 
-Mountains: a hand-tuned, asymmetric, overlapping silhouette filled with '#'
-(natural monospace width -- no glyph stretching, so it can never collapse into
-solid bars). A white cap layer sits on the top edge of every ridge for snow,
-over a white->gray body gradient. Snow falls in front; stars twinkle behind.
+The mountain is shaded by CHARACTER, not by colour: a slope-aware ridge drawn
+with / \\ - and a body filled with a depth-weighted symbol soup (@ # % & * ! ( )
+| = : . ...) so denser glyphs read brighter and sparse ones read darker on the
+dark band. Snow caps stay white; snow falls in front; stars twinkle behind.
 """
 import bisect
 import random
@@ -15,7 +15,6 @@ LINE_H = 16
 Y0 = 60
 GROUND_Y = 206
 CX = W / 2
-FILL = "#"
 
 # --- hand-tuned skyline (x, top_row); smaller row = taller -----------------
 pts = [(0, 8), (5, 6), (9, 7), (14, 3), (18, 4), (22, 1), (24, 0), (27, 2),
@@ -33,13 +32,28 @@ def surf(x):
 
 S = [surf(x) for x in range(N)]
 
-# body (everything below the ridge) and cap (the top ridge cell) per row
-body = ["".join(FILL if r > S[x] else " " for x in range(N)) for r in range(R)]
-cap = ["".join(FILL if r == S[x] else " " for x in range(N)) for r in range(R)]
+# depth-weighted palettes: dense glyphs (more ink -> brighter on dark bg) for the
+# lit upper faces, sparse glyphs (darker) for the shadowed base.
+UPPER = list("@#%&$@#%&")         # just under the snow: brightest, densest
+MID = list("*!()/\\|=+&%?")       # rocky mid-face: busy texture
+LOWER = list(".:;'^,|!")          # base in shadow: sparse, dim
+random.seed(13)
 
-# white snowy summit -> dark rocky base
-fills = ["#f6f8fa", "#e6edf3", "#cdd9e5", "#aeb9c5", "#8b949e",
-         "#717b85", "#5c656e", "#49515a", "#3a414a", "#2d333b"]
+def body_char(x, r):
+    maxd = (R - 1) - S[x]
+    f = (r - S[x]) / maxd if maxd > 0 else 1.0     # 0 just below ridge -> 1 at base
+    pal = UPPER if f < 0.34 else MID if f < 0.7 else LOWER
+    return random.choice(pal)
+
+def cap_char(x):
+    s = S[x]
+    sr = S[x + 1] if x + 1 < N else s
+    return "/" if sr < s else "\\" if sr > s else "-"
+
+body = ["".join(body_char(x, r) if r > S[x] else " " for x in range(N))
+        for r in range(R)]
+cap = ["".join(cap_char(x) if r == S[x] else " " for x in range(N))
+       for r in range(R)]
 
 def esc(t):
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -64,6 +78,7 @@ stars = [(round(random.uniform(20, W - 20), 1), round(random.uniform(12, 50), 1)
          for _ in range(12)]
 
 # --- emit ------------------------------------------------------------------
+BODY_COLOR = "#aeb9c5"
 out = ['<?xml version="1.0" encoding="UTF-8"?>',
        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
        f'viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid meet" '
@@ -79,11 +94,9 @@ out.append('  </g>')
 
 out.append(f'  <g font-family="monospace" font-size="{FS}" xml:space="preserve" '
            f'text-anchor="middle">')
-# body gradient
 for r in range(R):
-    out.append(f'    <text x="{CX}" y="{Y0 + r * LINE_H}" fill="{fills[r]}">'
+    out.append(f'    <text x="{CX}" y="{Y0 + r * LINE_H}" fill="{BODY_COLOR}">'
                f'{esc(body[r])}</text>')
-# snow caps (white, on top)
 for r in range(R):
     out.append(f'    <text x="{CX}" y="{Y0 + r * LINE_H}" fill="#ffffff">'
                f'{esc(cap[r])}</text>')
@@ -111,8 +124,8 @@ out.append('</svg>')
 with open("snowy-mountain.svg", "w", encoding="utf-8") as f:
     f.write("\n".join(out) + "\n")
 
-# ASCII preview to stdout (cap shown as 'o' so the snow line is visible)
-print("PREVIEW (o = snow cap, # = rock):\n")
+# composed ASCII preview (cap over body) so the texture is visible as text
+print("PREVIEW:\n")
 for r in range(R):
-    print("".join("o" if cap[r][x] == FILL else (body[r][x]) for x in range(N)))
+    print("".join(cap[r][x] if cap[r][x] != " " else body[r][x] for x in range(N)))
 print("\nwrote snowy-mountain.svg")
