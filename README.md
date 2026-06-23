@@ -85,7 +85,9 @@
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=Ayprusss&show_icons=true&hide_border=true&include_all_commits=true&title_color=ffffff&icon_color=ffffff&text_color=c9d1d9&bg_color=0d1117&ring_color=ffffff"/>
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ayprusss&layout=compact&hide_border=true&langs_count=8&title_color=ffffff&text_color=c9d1d9&bg_color=0d1117"/>
 
+  <!-- 
 <img width="98%" src="https://github-profile-trophy.vercel.app/?username=Ayprusss&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=8"/>
+  -->
 
 </div>
 
